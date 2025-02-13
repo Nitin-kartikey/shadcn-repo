@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
-interface Options {
-  options: string[],
-}
-
-interface DropdownProps extends Options {
+interface DropdownProps extends React.ComponentProps<"select">{
   label: string;
+  options: string[];
   multiSelect?: boolean;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ label, options, multiSelect = false }) => {
+const Dropdown: React.FC<DropdownProps> = ({ label, options, multiSelect = false, ...props }) => {
   const [selected, setSelected] = useState<string[]>(multiSelect ? [] : [""]);
 
   const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
