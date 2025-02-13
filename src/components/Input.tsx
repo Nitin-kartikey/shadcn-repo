@@ -1,5 +1,16 @@
 import React from "react";
 
+interface LabelProps {
+  label : string;
+}
+
+interface PlaceholderProps{
+  placeholder: string;
+}
+
+interface IconsProps{
+  icons ? : string;
+}
 interface InputProps {
   label: string;
   placeholder: string;

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
-interface DropdownProps {
+interface Options {
+  options: string[],
+}
+
+interface DropdownProps extends Options {
   label: string;
-  options: string[];
   multiSelect?: boolean;
 }
 
