@@ -10,15 +10,15 @@ const App: React.FC = () => {
         <h1 className="text-3xl font-semibold text-center mb-6">User Form</h1>
 
         <div className="space-y-6">
-          <Input label="Username" placeholder="Enter your name" icon={<FaUser />} />
+          <Input label="Username" placeholder="Enter your name" Icons={<FaUser />} />
 
-          <Dropdown label="Single Select" options={["Option 1", "Option 2", "Option 3"]} />
+          <Dropdown label="Color Options" options={["Red", "Green", "Blue"]} />
 
-          <Dropdown label="Multi Select" options={["Option 1", "Option 2", "Option 3"]} multiSelect />
+          <Dropdown label="Company Options" options={["Puma", "Adidas", "Levis"]}/>
         </div>
       </div>
     </div>
   );
 };
 
-export default App;
+export default App; 
